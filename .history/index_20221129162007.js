@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/database";
 
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyCY10-8rf5MfWL1VNWnKYG_b4dogJX2odA",
     authDomain: "clothingapp-1f197.firebaseapp.com",
     databaseURL: "https://clothingapp-1f197-default-rtdb.firebaseio.com",
@@ -12,7 +12,7 @@ import { getDatabase, ref, set } from "firebase/database";
     measurementId: "G-HQ0MFE1R31"
   };
 
-const appfb = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 function writeDeals (name,brand,discount,oldprice,newprice) {
 const db = getDatabase();
@@ -30,7 +30,6 @@ set(reference, {
 }
 
 writeDeals("floralshirt","zara", "20", "20", "16");
-
 
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
