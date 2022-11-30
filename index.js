@@ -1,44 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
-
- const firebaseConfig = {
-    apiKey: "AIzaSyCY10-8rf5MfWL1VNWnKYG_b4dogJX2odA",
-    authDomain: "clothingapp-1f197.firebaseapp.com",
-    databaseURL: "https://clothingapp-1f197-default-rtdb.firebaseio.com",
-    projectId: "clothingapp-1f197",
-    storageBucket: "clothingapp-1f197.appspot.com",
-    messagingSenderId: "318379295880",
-    appId: "1:318379295880:web:cbf3d19154a54c675c0b3d",
-    measurementId: "G-HQ0MFE1R31"
-  };
-
-const appfb = initializeApp(firebaseConfig);
-
-function writeDeals (name,brand,discount,oldprice,newprice) {
-const database = getDatabase();
-
-set(ref(database,'deals/' + deals), {
-    name: name,
-    brand: brand,
-    discount: discount,
-    oldprice: oldprice,
-    newprice: newprice
-    });
-
-}
-
-var deals = firebase.database().ref("deals/");
-
-playersRef.set ({
-   Deal1: { name:purple,
-    brand:zara,
-    discount: 20,
-oldprice:30,
-newprice:10
-      
-   }
-});
-
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 };
@@ -213,4 +172,43 @@ app.get('/privacy', (req, res) => {
 
 app.listen(process.env.PORT || 8000, function(){
     console.log('Connected to localhost:8000');
+});
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyCY10-8rf5MfWL1VNWnKYG_b4dogJX2odA",
+    authDomain: "clothingapp-1f197.firebaseapp.com",
+    databaseURL: "https://clothingapp-1f197-default-rtdb.firebaseio.com",
+    projectId: "clothingapp-1f197",
+    storageBucket: "clothingapp-1f197.appspot.com",
+    messagingSenderId: "318379295880",
+    appId: "1:318379295880:web:cbf3d19154a54c675c0b3d",
+    measurementId: "G-HQ0MFE1R31"
+  };
+
+// Initialize Firebase
+const appdb = initializeApp(firebaseConfig);
+
+  import {getDatabase, set, get, update, remove, ref}
+  from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+import { prototype } from "body-parser";
+
+  const db = getDatabase();
+  
+var deals = firebase.database().ref("deals/");
+
+deals.set ({
+
+    deal1: {
+        name: hhhh,
+        thing: qqqq
+    }
 });
