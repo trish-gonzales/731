@@ -175,3 +175,46 @@ app.listen(process.env.PORT || 8000, function(){
 });
 
 
+
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCY10-8rf5MfWL1VNWnKYG_b4dogJX2odA",
+  authDomain: "clothingapp-1f197.firebaseapp.com",
+  databaseURL: "https://clothingapp-1f197-default-rtdb.firebaseio.com",
+  projectId: "clothingapp-1f197",
+  storageBucket: "clothingapp-1f197.appspot.com",
+  messagingSenderId: "318379295880",
+  appId: "1:318379295880:web:cbf3d19154a54c675c0b3d",
+  measurementId: "G-HQ0MFE1R31"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  // Reference to your entire Firebase database
+  const database = getDatabase(app);
+  
+  // Get a reference to the recommendations object of your Firebase.
+  // Note: this doesn't exist yet. But when we write to our Firebase using
+  // this reference, it will create this object for us!
+  var recommendations = myFirebase.child("recommendations");
+  
+  // Push our first recommendation to the end of the list and assign it a
+  // unique ID automatically.
+
+  recommendations.push({
+      "title": "The danger of a single story",
+      "presenter": "Chimamanda Ngozi Adichie",
+      "link": "https://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story"
+  });
+

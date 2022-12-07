@@ -1,0 +1,20 @@
+{
+  "deals": [{
+    "name": "Alex Meraz",
+    "type": 24,
+    "brand": "ameraz@email.com",
+    "oldprice": 20,
+    "discount": "ameraz@email.com",
+    "newprice": "",
+    "website" : "google.com"
+
+  }, { "name": "Alex Meraz",
+  "type": 24,
+  "brand": "ameraz@email.com",
+  "oldprice": 20,
+  "discount": "ameraz@email.com",
+  "newprice": "",
+  "website" : "google.com"
+  }]
+
+}

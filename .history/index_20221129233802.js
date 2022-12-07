@@ -175,3 +175,30 @@ app.listen(process.env.PORT || 8000, function(){
 });
 
 
+
+
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+  // ...
+  // The value of `databaseURL` depends on the location of the database
+  apiKey: "AIzaSyCY10-8rf5MfWL1VNWnKYG_b4dogJX2odA",
+  authDomain: "clothingapp-1f197.firebaseapp.com",
+  databaseURL: "https://clothingapp-1f197-default-rtdb.firebaseio.com",
+  projectId: "clothingapp-1f197",
+  storageBucket: "clothingapp-1f197.appspot.com",
+  messagingSenderId: "318379295880",
+  appId: "1:318379295880:web:cbf3d19154a54c675c0b3d",
+  measurementId: "G-HQ0MFE1R31"
+
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
